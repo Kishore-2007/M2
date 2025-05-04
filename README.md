@@ -12,32 +12,35 @@ Write a C program to print even numbers ranging from M to N (including M and N v
 7.	Continue the loop until you have iterated through all numbers from M to N.
 
 ## PROGRAM:
-
+```python
+#include <stdio.h>
+int main() {
+    int M, N;
+    scanf("%d %d", &M, &N);
+    int start = (M > N) ? M : N;
+    int end = (M < N) ? M : N;
+    if (start % 2 != 0) {
+        start--;
+    }
+    for (int i = start; i >= end; i -= 2) {
+        printf("%d ", i);
+    }
+    return 0;
+}
+```
 ## OUTPUT:
-
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/67f5f069-3ffe-4827-b7f8-ffd36edd2f6e)
 
 ## RESULT:
 Thus the program to print even numbers ranging from M to N (including M and N values) has been executed successfully
  
- 
 
 
 # EX-07-Nested-loop
-
 ## AIM:
-
 Write a C program to print the given triangular pattern using loop.
 
 ## ALGORITHM:
-
 1.	Declare a variable to store the number of rows in the triangle.
 2.	Use the printf function to prompt the user to enter the number of rows.
 3.	Use a loop (for or while) to iterate through each row.
@@ -45,59 +48,81 @@ Write a C program to print the given triangular pattern using loop.
 5.	Continue the loop until you have printed the entire triangular pattern.
 
 ## PROGRAM:
-
-
+```python
+#include<stdio.h>
+int main()
+{
+    int i,n,j;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("%d ",j);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
 ## OUTPUT:
-
-
-
-
+![image](https://github.com/user-attachments/assets/7eef892a-d873-4965-8621-8325343e607e)
 
 ## RESULT:
-
 Thus the program to print the given triangular pattern using loop has been executed successfully
  
  
 
-
 # EX-08-Functions
-
 ## AIM:
-
 Write a C program to perform addition and subtraction of two numbers using functions (with argument and without return type).
 
 ## ALGORITHM:
-
 1.	Declare two functions, one for addition and one for subtraction. Both functions should take two integer arguments.
 2.	Inside the addition & subtraction function, add & subtract the two numbers and print the result.
 3.	In the main function, declare two integer variables and read their values from the user.
 4.	Call the addition and subtraction functions, passing the two numbers as arguments.
 
 ## PROGRAM:
-
-
+```python
+#include<stdio.h>
+int add(int,int);
+int sub(int,int);
+int main()
+{
+    int a,b,c,d;
+    scanf("%d%d",&a,&b);
+    c = add(a,b);
+    d = sub(a,b);
+    printf("Addition: %d\n",c);
+    printf("Subtraction: %d",d);
+}
+int add(int x,int y)
+{
+    int z;
+    z = x + y;
+    return z;
+}
+int sub(int x,int y)
+{
+    int z;
+    z = x - y;
+    return z;
+}
+```
 ## OUTPUT:
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/0e9e540d-f285-4241-8407-a98071cf95df)
 
 ## RESULT:
-
 Thus the program to perform addition and subtraction of two numbers using functions has been executed successfully
  
  
 
-
 # EX-09-Use For Loop
-
 ## AIM:
-
 Write a c program to find the sum of odd digits using for loop
 
 ## ALGORITHM:
-
 1.	Declare variables to store the input number and the sum of odd digits.
 2.	Initialize the sum of odd digits to 0.
 3.	Use a for loop to iterate through each digit of the input number.
@@ -106,23 +131,35 @@ Write a c program to find the sum of odd digits using for loop
 6.	Print the sum of odd digits.
 
 ## PROGRAM:
-
-
+```python
+#include<stdio.h>
+int main()
+{
+    int a,b,sum=0,i;
+    scanf("%d%d",&a,&b);
+    for(i=a;i<=b;i++)
+    {
+        if(i%2!=0)
+        {
+            sum += i;
+        }
+    }
+    printf("%d",sum);
+    return 0;
+}
+```
 ## OUTPUT:
-
-
-
+![image](https://github.com/user-attachments/assets/8bc19f70-7da6-4bdc-8cac-be7cb97463dc)
 
 ## RESULT:
-
 Thus the program to find the sum of odd digits using for loop has been executed successfully.
-
 
 
 
 # EX – 10 - Factorial of a Number Using a Function
 ## AIM:
 To write a C program that calculates the factorial of a given number using a user-defined function.
+
 ## ALGORITHM:
 1.	Start
 2.	Declare the function fact().
@@ -136,10 +173,22 @@ d.	After the loop, print the factorial value.
 5.	End
 
 ## PROGRAM:
-
-
+```python
+#include<stdio.h>
+int main()
+{
+    int n,fact=1;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++)
+    {
+        fact*=i;
+    }
+    printf("Factorial value is: %d",fact);
+    return 0;
+}
+```
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/aaff566c-effc-4608-b2af-13dd60ab0d84)
 
 ## RESULT:
 The program correctly computes the factorial of a given number using a separate function and displays the result.
- 
